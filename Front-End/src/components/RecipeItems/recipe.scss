@@ -1,0 +1,64 @@
+// Define primary and secondary colors
+$primary-color: #ffffff; // Orange
+$dark-color: #333333; // Dark color
+$dark-color-alt: #39393b; // Dark color
+ 
+// Component styles
+.recipe-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: $dark-color-alt;
+  padding: 40px 3%;
+  gap: 2rem;
+}
+
+.recipe-item {
+  background-color: $dark-color;
+  color: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  max-width: 350px;
+
+  h2 {
+    color: $primary-color;
+    margin-bottom: 10px;
+    font-size: 36px;
+  }
+
+  .recipe-img {
+    margin-bottom: 10px;
+
+    img {
+      width: 100%;
+      border-radius: 5px;
+    }
+  }
+
+  p {
+    font-size: 20px;
+  }
+  .price{
+    color: $primary-color;
+      font-weight: bold;
+      margin-top: 10px;
+  }
+  .cart-price{
+    display: flex;
+    justify-content: space-between;
+
+    .cart-btn{
+      background-color: var(--deep-yellow);
+      padding: 7px 15px;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+
+      &:hover{
+        background-color: var(--yellow);
+      }
+    }
+  }
+}

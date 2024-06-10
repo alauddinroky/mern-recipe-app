@@ -1,0 +1,98 @@
+.list {
+    border: 1px solid #ccc;
+    padding: 20px;
+    // width: 300px;
+  
+    h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+  
+    .cart-items {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .cart-item {
+        display: flex;
+        align-items: center;
+        height: 8rem;
+        /* width: 80%; */
+        margin-bottom: 10px;
+        padding: 15px 30px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: var(--btn-yellow);
+        justify-content: space-between;
+    }
+  
+      .item-image {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+      }
+  
+      .item-details {
+        display: flex;
+        // flex-direction: column;
+        width: 100%; /* Width set to 100% */
+      }
+      .item-details {
+          display: flex;
+          /* width: 100%; */
+          gap: 2rem;
+          /* width: 100%; */
+          justify-content: space-between;
+          padding: 0 3rem;
+  
+      .name {
+        font-weight: bold;
+      }
+  
+      .price {
+        color: green;
+      }
+    }
+  
+    .total-price {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .delete-icon{
+      cursor: pointer;
+      display: flex;
+    }
+  }
+
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:  #c2efc1;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 9999; /* Ensure the popup is on top of everything */
+    display: none; /* Initially hide the popup */
+    opacity: 0.5; /* Initial opacity */
+    animation: fadeInOut 5s ease-in-out forwards;
+    // transition: opacity 4s ease-in-out; /* Smooth fade transition */
+  }
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.3;
+    }
+  }
+  .popup.active {
+    display: block; /* Show the popup when active */
+  }
+  

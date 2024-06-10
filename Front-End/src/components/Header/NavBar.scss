@@ -1,0 +1,82 @@
+// NavBar.scss
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 7%;
+  
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color : #ffa500
+    }
+  
+    .menu-icon {
+      display: none; /* Hide the menu icon by default */
+      cursor: pointer;
+    }
+  
+    .nav-links {
+      display: flex;
+  
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 1rem;
+  
+        li {
+          margin-left: 20px;
+          
+        }
+  
+        a {
+          color: #fff;
+          text-decoration: none;
+          transition: color 0.3s ease;
+  
+          &:hover {
+            color: #ffa500;
+          }
+        }
+      }
+  
+      &.active {
+        display: block;
+      }
+    }
+  
+    /* Media Query for responsiveness */
+    @media screen and (max-width: 788px) {
+      .nav-links {
+        display: none; /* Hide the nav links by default on smaller screens */
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        z-index: 1;
+        transition: all 0.3s ease;
+  
+        &.active {
+          display: flex; /* Show the nav links when active */
+        }
+        ul{
+            flex-direction: column;
+        }
+        li {
+          margin: 10px 0; /* Adjust margin for smaller screens */
+        }
+      }
+  
+      .menu-icon {
+        display: block; /* Show the menu icon on smaller screens */
+      }
+    }
+  }
+  
